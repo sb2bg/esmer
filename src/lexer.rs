@@ -17,6 +17,12 @@ pub enum Token {
     #[token("^")]
     Caret,
 
+    #[token("(")]
+    LeftParen,
+
+    #[token(")")]
+    RightParen,
+
     #[regex(r"\d+(\.\d+)?", |lexer| lexer.slice().parse::<f64>())]
     Number(f64),
 
